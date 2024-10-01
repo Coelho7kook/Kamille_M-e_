@@ -16,7 +16,7 @@ git push -u origin main
     <title>Feliz Aniversário, Mãe!</title>
     <style>
         body {
-            background-image: url('background.jpg');
+            background-image: url('background1.jpg');
             background-size: cover;
             font-family: 'Arial', sans-serif;
             color: #333;
@@ -27,12 +27,10 @@ git push -u origin main
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(8px);
         }
 
         .content {
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.7); /* Transparência leve para legibilidade */
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -57,7 +55,32 @@ git push -u origin main
             font-size: 0.9em;
             color: #888;
         }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: rgba(255, 105, 180, 0.7); /* Transparência nos botões */
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 0 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: rgba(255, 105, 180, 1); /* Cor mais intensa ao passar o mouse */
+        }
     </style>
+    <script>
+        function changeBackground(image) {
+            document.body.style.backgroundImage = `url(${image})`;
+        }
+    </script>
 </head>
 <body>
     <audio autoplay loop>
@@ -78,6 +101,15 @@ git push -u origin main
         <p>Eu te amo, mãe, com todo o meu coração, e sei que, não importa quantas vezes eu diga isso, nunca será suficiente para expressar o quanto você significa para mim. Que este novo ano da sua vida seja cheio de alegrias, de paz e de tudo aquilo que te faz sorrir, porque você merece o mundo, e muito mais. Feliz aniversário!</p>
 
         <footer>Com todo o amor do mundo, sua filha, Kamille</footer>
+
+        <!-- Botões para trocar o plano de fundo -->
+        <div class="buttons">
+            <button class="btn" onclick="changeBackground('background1.jpg')">Imagem 1</button>
+            <button class="btn" onclick="changeBackground('background2.jpg')">Imagem 2</button>
+            <button class="btn" onclick="changeBackground('background3.jpg')">Imagem 3</button>
+            <button class="btn" onclick="changeBackground('background4.jpg')">Imagem 4</button>
+            <button class="btn" onclick="changeBackground('background5.jpg')">Imagem 5</button>
+        </div>
     </div>
 </body>
 </html>
